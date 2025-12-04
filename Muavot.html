@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang Mua Vợt Cầu Lông</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- W3CSS + Fonts -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="muastyle.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top w3-bar w3-black w3-card">
+  <div id="fonttitle" class="w3-bar-item">MKbadminton</div>
+  <a href="index.html#home" class="w3-bar-item w3-button">HOME</a>
+  <a href="index.html#about" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="index.html#recommend" class="w3-bar-item w3-button">RACKETS</a>
+  <a href="index.html#buy" class="w3-bar-item w3-button">BUY</a>
+  <a href="index.html#contact" class="w3-bar-item w3-button">CONTACT</a>
+</div>
+
+<div class="buy-title-box">
+  <h2 class="buy-title">🏸Trang Mua Vợt Cầu Lông🏸</h2>
+  <p class="buy-subtitle">Chọn cây vợt phù hợp và đặt hàng ngay hôm nay!</p>
+</div>
+
+
+<!-- 4 sản phẩm -->
+<div class="racket-grid">
+  <div class="racket-card">
+    <img src="nanora.png" alt="Yonex Nanoray 2025">
+    <div class="racket-info">
+      <h3>Yonex Nanoray 2025</h3>
+      <p><b>Thông số:</b> Trọng lượng nhẹ, vung vợt nhanh.</p>
+      <p><b>Giá:</b> 1.500.000 VND</p>
+      <button class="buy-button" onclick="document.getElementById('order-form').scrollIntoView({behavior:'smooth'})"> Đặt hàng </button>
+    </div>
+  </div>
+
+  <div class="racket-card">
+    <img src="arcsa.png" alt="Yonex Arcsaber 11 Pro">
+    <div class="racket-info">
+      <h3>Yonex Arcsaber 11 Pro</h3>
+      <p><b>Thông số:</b> Cân bằng, độ dẻo trung bình.</p>
+      <p><b>Giá:</b> 3.200.000 VND</p>
+      <button class="buy-button" onclick="document.getElementById('order-form').scrollIntoView({behavior:'smooth'})"> Đặt hàng </button>
+    </div>
+  </div>
+</div>
+
+<div class="racket-grid">
+  <div class="racket-card">
+    <img src="1002z.png" alt="Yonex Astrox 100ZZ">
+    <div class="racket-info">
+      <h3>Yonex Astrox 100ZZ</h3>
+      <p><b>Thông số:</b> Đầu nặng, siêu cứng.</p>
+      <p><b>Giá:</b> 4.500.000 VND</p>
+      <button class="buy-button" onclick="document.getElementById('order-form').scrollIntoView({behavior:'smooth'})"> Đặt hàng </button>
+    </div>
+  </div>
+
+  <div class="racket-card">
+    <img src="ryga.png" alt="Victor Thruster Ryuga II Pro">
+    <div class="racket-info">
+      <h3>Victor Thruster Ryuga II Pro</h3>
+      <p><b>Thông số:</b> Độ cứng trung bình, ổn định.</p>
+      <p><b>Giá:</b> 3.800.000 VND</p>
+      <button class="buy-button" onclick="document.getElementById('order-form').scrollIntoView({behavior:'smooth'})"> Đặt hàng </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Form đặt hàng -->
+<div class="order-form" id="order-form">
+  <h3>Thông tin đặt hàng</h3>
+  <form id="checkoutForm" onsubmit="return validateForm()">
+    <label>Họ và tên</label>
+    <input class="w3-input w3-margin-bottom" type="text" name="fullname" id="fullname">
+    <label>Email</label>
+    <input class="w3-input w3-margin-bottom" type="email" name="email" id="email">
+    <label>Số điện thoại</label>
+    <input class="w3-input w3-margin-bottom" type="text" name="phone" id="phone">
+    <label>Địa chỉ giao hàng</label>
+    <textarea class="w3-input w3-margin-bottom" name="address" id="address"></textarea>
+    <p id="errorMsg" style="color:red; display:none;">⚠️ Vui lòng điền đầy đủ thông tin trước khi xác nhận!</p>
+    <button class="buy-button" type="submit">Xác nhận đặt hàng</button>
+  </form>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-black w3-center w3-padding-16">
+  <p>© 2025 Badminton Club</p>
+</footer>
+
+<script>
+function validateForm() {
+  let fullname = document.getElementById("fullname").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let phone = document.getElementById("phone").value.trim();
+  let address = document.getElementById("address").value.trim();
+  let errorMsg = document.getElementById("errorMsg");
+
+  if (!fullname || !email || !phone || !address) {
+    errorMsg.style.display = "block"; // hiện chữ đỏ
+    return false; // không submit
+  }
+
+  // Nếu hợp lệ → chuyển sang trang thankyou.html
+  window.location.href = "thankyou.html";
+  return false; // ngăn reload mặc định
+}
+</script>
+
+
+</body>
+</html>

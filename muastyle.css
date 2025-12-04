@@ -1,0 +1,91 @@
+/* muastyle.css */
+body {
+  font-family: "Raleway", sans-serif;
+  background: #ef76a0;
+}
+
+.racket-card {
+  max-width: 700px;
+  margin: 24px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.racket-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.racket-info {
+  padding: 20px;
+}
+
+.buy-button {
+  background-color: #c62155;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #a81c45;
+}
+
+.order-form {
+  max-width: 700px;
+  margin: 32px auto;
+  background: #f9f9f9;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.racket-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* dàn đều 2 card mỗi hàng */
+  gap: 24px;
+  margin: 0 auto 32px;
+  max-width: 960px; /* giới hạn chiều rộng toàn bộ grid */
+  padding: 0 16px;
+}
+
+.racket-card {
+  flex: 0 0 calc(50% - 12px); /* 2 card mỗi hàng, trừ gap */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.racket-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.buy-title-box {
+  text-align: center;
+  padding: 48px 0px 24px;
+}
+
+.buy-title {
+  font-size: 36px;
+  color: #daf2f4;
+}
+
+.buy-subtitle {
+  font-family: 'Mali', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 0px;
+}

@@ -1,0 +1,296 @@
+/* Base font */
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Navbar stays the same */
+.w3-bar.w3-black {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background: #19183B !important; /* keep dark navy */
+  flex: 1;
+}
+
+.w3-bar .w3-button {
+  padding: 16px 20px;
+  color: #E7F2EF; /* light mint text */
+}
+
+.w3-button:hover {
+  background: #708993; /* muted teal-grey hover */
+  color: #E7F2EF;
+  transition: 0.15s;
+}
+
+.w3-bar-item {
+  padding: 16px 20px;
+  color: #E7F2EF;
+}
+
+/* Title */
+#fonttitle {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Knewave";
+  white-space: nowrap;
+  color: #E7F2EF;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Card layout */
+.w3-third .w3-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Top bar alignment */
+.w3-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+/* Section gap for brand cards */
+.section-gap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .section-gap {
+    flex-wrap: nowrap;          /* keep in one row */
+    overflow-x: auto;           /* enable horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    justify-content: flex-start; /* align items to the left */
+  }
+
+  .section-gap > div {
+    flex: 0 0 auto;             /* prevent shrinking */
+    min-width: 220px;           /* card width on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .w3-top.w3-bar {
+    overflow-x: auto;              /* enable horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    white-space: nowrap;           /* keep items in one line */
+  }
+
+  .w3-top.w3-bar .w3-bar-item {
+    flex: 0 0 auto;                /* prevent shrinking */
+    display: inline-block;         /* keep items side by side */
+  }
+}
+
+.section-gap > div .w3-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 360px; /* adjust this value to fit your tallest card */
+}
+
+/* Cards back to white */
+.w3-card {
+  background: #ffffff; /* white */
+  color: #19183B;      /* dark navy text */
+}
+
+/* Section backgrounds */
+.w3-light-grey {
+  background: #E7F2EF !important; /* very light mint */
+}
+
+/* Upcoming Events section */
+
+/* Buttons */
+.w3-button.w3-black {
+  background: #19183B !important;
+  color: #E7F2EF;
+}
+
+.w3-button.w3-black:hover {
+  background: #708993 !important;
+  color: #E7F2EF;
+}
+
+/* Footer */
+footer.w3-black {
+  background: #19183B !important;
+  color: #E7F2EF;
+}
+
+.mySlides {
+  display: none;
+}
+
+.slideshow-container img {
+  height: 500px;       /* adjust height */
+  object-fit: cover;   /* crop nicely */
+}
+
+.title-overlay {
+  background: rgba(25, 24, 59, 0.6); /* dark navy with 60% transparency */
+  color: #E7F2EF;                    /* light mint text */
+  padding: 20px 40px;
+  border-radius: 8px;                /* rounded corners */
+}
+
+#about h2 {
+  font-family: "Mali", cursive;
+}
+
+#about h2 i {
+  margin-left: 8px;       /* space between text and icon */
+  color: inherit;         /* inherit the text color of the heading */
+  font-size: 0.9em;       /* slightly smaller than text */
+  vertical-align: middle; /* align nicely with text */
+  cursor: pointer;        /* looks clickable */
+}
+
+#about h2 a {
+  text-decoration: none;  /* remove underline from the link */
+}
+
+/* Latest Rackets section background */
+#recommend {
+  background: 
+    linear-gradient(rgba(255, 198, 112, 0.6), rgba(49, 219, 197, 0.6)), /* navy tint */
+    url("badmintonbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 48px 16px;         /* slightly smaller top/bottom */
+  text-align: center;         /* centers inline-blocks */
+  position: relative;         /* good practice if you add overlays */
+}
+
+/* Heading style */
+#recommend h2 {
+  font-family: "Mali", cursive; /* matches your About heading */
+  text-align: center;
+  margin-bottom: 32px;
+  color: #ffffff; /* dark navy for contrast */
+}
+
+/* Card layout inside latest section */
+#recommend .w3-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 360px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;
+  color: #19183B;
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+#recommend .w3-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+#recommend .w3-container {
+  padding: 16px;
+}
+
+.racket-label {
+  text-decoration: underline;   /* underline the category */
+  font-weight: bold;            /* make it stand out */
+  color: #c62179;               /* dark navy for emphasis */
+}
+
+.recommend-title-box {
+  display: inline-flex;              /* shrink to fit content */
+  align-items: center;              /* vertical center */
+  justify-content: center;          /* horizontal center */
+  padding: 12px 24px;               /* balanced padding */
+  max-width: 90%;                   /* prevent overflow on mobile */
+  text-align: center;
+}
+
+.recommend-title-box h2 {
+  margin: 0;
+  font-family: "Mali", cursive;
+  font-weight: 700;
+  color: #E7F2EF;
+  font-size: 28px;
+  line-height: 1.3;
+  background: rgba(25, 24, 59, 0.85);
+  border-radius: 8px;
+  margin: 0 auto 16px auto;
+  padding: 12px 24px;
+  white-space: nowrap;              /* prevent wrapping */
+}
+
+#recommend h3 {
+  font-family: "Ysabeau", cursive;   /* or any font you prefer */
+  font-size: 27px;                   /* adjust size */
+  font-weight: 700;                  /* bold */
+  color: #19183B;                    /* dark navy text */
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .recommend-title-box h2 {
+    font-size: 20px;
+    white-space: normal;            /* allow wrapping if needed */
+  }
+}
+
+@media (max-width: 768px) {
+  #recommend .w3-card {
+    min-width: 240px;
+  }
+}
+
+#recommend .section-gap {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 16px;
+  padding-bottom: 8px;
+}
+
+/* Each card wrapper */
+#recommend .section-gap > div {
+  flex: 0 0 auto;
+  min-width: 240px; /* ensures consistent card width */
+}
+
+.buy-button {
+  background-color: #c62155;       /* accent red */
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-button:hover {
+  background-color: #a81c45;
+  transform: scale(1.05);
+}
